@@ -1,0 +1,81 @@
+
+#wrapper{ 
+	width: 520px;
+	height: 390px;
+	position: relative;
+	background-color: #999999;
+	margin: 0 auto;
+}
+
+#game{
+	top: 30px;
+	left: 51px;
+	width: 217px;
+	height: 166px;
+  display: none;
+}
+
+#popUp{
+    top: 20px;
+    left: 20px;
+    width: 280px;
+    height: 200px;
+    display: none;
+    background-color: #000000;
+}
+#popUpHeadline{
+    left: 100px;
+    top: 11px;
+    width: 110px;
+    height: 60px;
+    color: #FFF;
+    font-family: "Arial";
+    font-size: 11pt;
+}
+
+
+.cardWrapper{}
+.card{}
+.front{
+  background-color: #CECECE;
+  font-size: 10px;
+  font-family: "Arial"
+}
+.front p{
+  width: 100%;
+  text-align: center;
+}
+.back{
+  color: #FFFFFF;
+  background-color: #333333;
+}
+.back p{
+  width: 100%;
+  text-align: center;
+}
+
+body {
+
+
+ 
+
+
+  background-repeat: no-repeat;
+
+  /* La imagen de fondo está fija en el viewport, de modo que no se mueva cuando
+13
+     la altura del contenido supere la altura de la imagen. */
+
+  background-attachment: fixed;
+
+  /* La imagen de fondo se reescala cuando se cambia el ancho de ventana
+17
+     del navegador */
+
+  background-size: cover;
+
+ 
+
+
+
+}

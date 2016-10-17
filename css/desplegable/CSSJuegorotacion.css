@@ -1,0 +1,279 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+<!--Fin juego -->
+
+<!--Desplegable Responsive-->
+* {
+	padding:0;
+	margin:0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {background:#FEFEFE;}
+
+.menu_bar {
+	display:none;
+}
+
+header {
+	width: 100%;
+}
+
+header nav {
+	background:#023859;
+	z-index:1000;
+	max-width: 1000px;
+	width:95%;
+	margin:20px auto;
+}
+
+header nav ul {
+	list-style:none;
+}
+
+header nav ul li {
+	display:inline-block;
+	position: relative;
+}
+
+header nav ul li:hover {
+	background:#E6344A;
+}
+
+header nav ul li a {
+	color:#fff;
+	display:block;
+	text-decoration:none;
+	padding: 20px;
+}
+
+
+
+header nav ul li:hover .children {
+	display:block;
+}
+
+header nav ul li .children {
+	display: none;
+	background:#011826;
+	position: absolute;
+	width: 150%;
+	z-index:1000;
+}
+
+header nav ul li .children li {
+	display:block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+
+header nav ul li .children li a {
+	display: block;
+}
+
+
+header nav ul li .caret {
+	position: relative;
+	top:3px;
+	margin-left:10px;
+	margin-right:0px;
+}
+
+body {
+
+
+ 
+
+  /* Nos aseguramos que la imagen de fondo este centrada vertical y
+
+    horizontalmente en todo momento */
+
+  background-position: center center;
+
+ 
+  /* La imagen de fondo no se repite */
+
+  background-repeat: no-repeat;
+
+  /* La imagen de fondo está fija en el viewport, de modo que no se mueva cuando
+13
+     la altura del contenido supere la altura de la imagen. */
+
+  background-attachment: fixed;
+
+  /* La imagen de fondo se reescala cuando se cambia el ancho de ventana
+17
+     del navegador */
+
+  background-size: cover;
+
+ 
+
+  /* Fijamos un color de fondo para que se muestre mientras se está
+21
+    cargando la imagen de fondo o si hay problemas para cargarla  */
+
+  background-color: #464646;
+
+}
+
+/*Nuevo 
+*/
+@media only screen and (max-width: 767px) {
+
+  body {
+
+    background-image: url(/Aplicaciones/XAMPP/xamppfiles/htdocs/Histologia-Kevin/imagenes/ss.jpeg);
+
+  }
+
+}
+
+
+
+@media screen and (max-width: 800px) {
+	body {
+		padding-top:80px;
+	}
+
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+
+
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+
+	header nav ul li a {
+		display: block;
+	}
+
+	header nav ul li:hover .children {
+		display: none;
+	}
+
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+
+	header nav ul li .caret {
+		float: right;
+	}
+
+
+
+}
+
+
+body {
+  background: #333;
+}
+
+.raw {
+  height: 120px;
+  width: 500px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+/* perspective */
+
+.flip-container {
+  perspective: 1000;
+  margin: 10px;
+  float: left;
+}
+/* turning on hover */
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container,
+.front,
+.back {
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
+  text-align: center;
+  font-size: 30px;
+  border-radius: 20px;
+}
+/* flipping speed here */
+
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+/* making the the other side hidden while flipping */
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* front side is in front of a back side */
+
+.front {
+  z-index: 2;
+  background-color: tomato;
+  color: white;
+}
+/* back side */
+
+.back {
+  transform: rotateY(180deg);
+  background-color: lightblue;
+}
+
+.back p {
+  font-size: 18px;
+  margin-top: 0px;
+  font-family: 'Kaushan Script', cursive;
+  border: 1px solid white;
+  border-radius: 20px;
+  background-color: #333;
+  color: white;
+}

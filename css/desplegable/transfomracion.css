@@ -1,0 +1,41 @@
+body {
+  background-color: #222;
+  -webkit-perspective: 2000px;
+   perspective: 2000px;
+}
+.contenedor {
+  width: 200px;
+  margin: 4% auto;
+  position: relative;
+  height: 267px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: all ease 1s;
+  animation: luz 4s linear infinite;
+  -webkit-animation: luz 4s linear infinite;
+}
+@-webkit-keyframes luz {
+    0%       {transform: rotateY(0deg)}    
+    100%     {transform: rotateY(-360deg)}
+}
+@-moz-keyframes luz {
+    0%       {transform: rotateY(0deg)}    
+    100%     {transform: rotateY(-360deg)}
+}
+
+
+.cara1, .cara2 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  
+}
+.cara1 {
+  background-image: url("../..//imagenes/imagen0021.jpg");
+  z-index: 2;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.cara2 {
+  background-image: url("../..//imagenes/imagen0021_1.jpg");
+}
