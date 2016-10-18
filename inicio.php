@@ -2,6 +2,12 @@
 
 <html>
      <?php
+         session_start();
+//         if ($_SESSION['loggedin'] == false){
+//             header("index_1.php");
+//         }
+             
+             
          
           
           
@@ -50,8 +56,8 @@
                                 <li><a href="#" onclick="getRandom()" id="random">Random</a></li>
                                                         
 				<ul class="nav navbar-nav navbar-right">          
-                                    <li><a href=""onclick="logout.php">Cerrar sesión <span class="sr-only"></span></a></li>
-            <img src="imagenes/alumnos/<?php echo $dni;?>.jpg" 
+                                    <li><a href="index_1.php" id="cierra">Cerrar sesión </a></li>
+                                    <img src="imagenes/alumnos/<?php echo $_SESSION['username']; ?>.jpg" 
                  class="img-circle" style="width:55px;padding:10px;">
           </ul>
                         </ul>		
@@ -122,3 +128,16 @@
     </body>
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script> 
+        function cerrarSesion(){
+            
+           $("#cerrar").load("logout.php");
+    }
+    </script>
+                             <script>       
+        function getRandom() {
+            var numero;
+            numero = Math.floor(Math.random() * (5 - 1)) + 1;
+            random.href="index.php";
+        }
+    </script>

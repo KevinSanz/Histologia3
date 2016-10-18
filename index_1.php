@@ -30,7 +30,16 @@ if(!isset($_SESSION['userid']))
     { 
         if(verificar_login($_POST['user'],$_POST['password'],$result) == 1)
         { 
-            $_SESSION['userid'] = $result->idusuario; 
+           
+            
+
+    $_SESSION['loggedin'] = true;
+    $_SESSION['username'] = $_POST['user'];
+
+    $_SESSION['start'] = time();
+    $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
+   
+
             header("location:inicio.php"); 
         } 
         else 

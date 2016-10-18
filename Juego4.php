@@ -3,7 +3,7 @@
 <html lang="en">
      <?php
          
-          
+           session_start();
           
         ?>
     <head>
@@ -111,8 +111,16 @@
 					</ul>
 				</li>
 				<li><a href="#">Resultados</a></li>
+                                
+                                <li><a href="#">Resultados</a></li>
                                 <li><a href="#" onclick="getRandom()" id="random">Random</a></li>
-				
+                                                       
+				<ul class="nav navbar-nav navbar-right">          
+           <li><a href="index_1.php" >Cerrar sesión </a></li>
+            <img src="imagenes/alumnos/<?php echo $_SESSION['username']; ?>.jpg" 
+                 class="img-circle" style="width:55px;padding:10px;">
+          
+			</ul>	
 			</ul>
 		</nav>
 	</header>

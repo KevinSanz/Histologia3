@@ -3,7 +3,7 @@
 <html>
      <?php
          
-          
+           session_start();
           
         ?>
     <head>
@@ -51,14 +51,13 @@
 				</li>
 				<li><a href="#">Resultados</a></li>
                                <li><a href="#" onclick="getRandom()" id="random">Random</a></li>
-                                                       </ul>
+                                                       
 				<ul class="nav navbar-nav navbar-right">          
-            <li><a href="./">Cerrar sesión <span class="sr-only"></span></a></li>
-            <img src="imagenes/alumnos/<?php echo $dni;?>.jpg" 
+           <li><a href="index_1.php" >Cerrar sesión </a></li>
+            <img src="imagenes/alumnos/<?php echo $_SESSION['username']; ?>.jpg" 
                  class="img-circle" style="width:55px;padding:10px;">
           
-				
-			</ul>
+			</ul>	</ul>
 		</nav>
 	</header>
                 <!--<Fin menu>-->
