@@ -15,6 +15,7 @@
         <script src="css/desplegable/JQueryLatest.js"></script>
         <script src="css/desplegable/Juego2.js"></script>
         <script src="css/desplegable/main.js"></script>
+        <script src="js/Random.js"></script>
         
         <style>
             body{
@@ -49,7 +50,13 @@
 					</ul>
 				</li>
 				<li><a href="#">Resultados</a></li>
-                                <li><a href="#">Ramdom</a></li>
+                               <li><a href="#" onclick="getRandom()" id="random">Random</a></li>
+                                                       </ul>
+				<ul class="nav navbar-nav navbar-right">          
+            <li><a href="./">Cerrar sesión <span class="sr-only"></span></a></li>
+            <img src="imagenes/alumnos/<?php echo $dni;?>.jpg" 
+                 class="img-circle" style="width:55px;padding:10px;">
+          
 				
 			</ul>
 		</nav>
