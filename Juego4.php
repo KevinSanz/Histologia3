@@ -21,15 +21,23 @@
         </script>
         <script>
     var pu;
+    var res;
+    var comprobarRes;
+    var comprobarPu;
     $( function() {
       
-    $( ".draggable" ).draggable();
+    $( ".draggable" ).draggable({
+        drag: function(e, ui){
+            res = this.id;
+            comprobarRes = res.substr(-1,1);
+        }
+    });
     $( ".droppable" ).droppable({
       drop: function( e, ui ) {
           var posX = e.pageX - $(this).position().left;
           var posY = e.pageY - $(this).position().top;
           pu = this.id;
-          
+          comprobarPu = pu.substr(-1,1);
         $( this )
 //          .append('<div id="recuadro" style="width: 130px; height: 130px; border: solid green 1px; position:absolute; top:'+posY+'px; left:'+posX+'px;"></div>');
         
@@ -64,7 +72,7 @@
                 sumar = true;
                 R4 = true;
             }
-            if(sumar){
+            if(sumar && comprobarPu === comprobarRes){
                  puntuacion = puntuacion + 10;
                 $( puntos )
                     .text(puntuacion);
@@ -105,8 +113,8 @@
 					<a href="#">Juegos</a>
 					<ul class="children">
                                             <li><a href="Juego1.php">Juego 1</a></li>
-						<li><a href="#">Juego 2</a></li>
-						<li><a href="#">Juego 3</a></li>
+                                            <li><a href="Juego2.php">Juego 2</a></li>
+                                            <li><a href="Juego3.php">Juego 3</a></li>
                                                 <li><a href="Juego4.php">Juego 4</a></li>
 					</ul>
 				</li>
@@ -128,22 +136,22 @@
                 
                     <div class="col">
                         <div class="col-sm-4">
-                            <div class="draggable">
+                            <div class="draggable" id="Respuesta1">
                             <img src="imagenes/fondoNico.jpg" alt="..." style="max-height: 250px; max-width: 300px">
                             <br>
                             
                             </div>
-                            <div class="draggable">
+                            <div class="draggable" id="Respuesta2">
                                 
-                            <img src="imagenes/fondoNico.jpg" style="max-height: 250px;  max-width: 300px">
+                                <img src="imagenes/imagen0020.jpg" style="max-height: 250px;  max-width: 300px">
                             </div>
-                            <div class="draggable">
+                            <div class="draggable" id="Respuesta3">
                             
-                            <img src="imagenes/fondoNico.jpg" style="max-height: 250px;  max-width: 300px">
+                                <img src="imagenes/imagen0021.jpg" style="max-height: 250px;  max-width: 300px">
                             </div>
-                            <div class="draggable">
+                            <div class="draggable" id="Respuesta4">
                             
-                            <img src="imagenes/fondoNico.jpg" style="max-height: 250px;  max-width: 300px">
+                                <img src="imagenes/imagen0022.jpg" style="max-height: 250px;  max-width: 300px; min-height: 200px; min-width: 300px">
                             </div>
                         </div>
                     
@@ -163,15 +171,15 @@
                             </div>
                             <div id="Res2" class="droppable">
                                 
-                            <img src="imagenes/fondoNico.jpg" style="max-height: 250px; max-width: 300px">
+                            <img src="imagenes/ciudad.jpg" style="max-height: 250px; max-width: 300px">
                             </div>
                             <div id="Res3" class="droppable">
                             
-                            <img src="imagenes/fondoNico.jpg" style="max-height: 250px; max-width: 300px">
+                                <img src="imagenes/imagen0021.jpg" style="max-height: 250px; max-width: 300px">
                             </div>
                             <div id="Res4" class="droppable">
                             
-                            <img src="imagenes/fondoNico.jpg" style="max-height: 250px; max-width: 300px">
+                            <img src="imagenes/ss.jpeg" style="max-height: 250px; max-width: 300px; min-height: 200px; min-width: 300px">
                             </div>
                         </div>
                     
