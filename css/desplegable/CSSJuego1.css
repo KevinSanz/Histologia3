@@ -242,8 +242,9 @@ body {
   width: 100px;
   height: 100px;
   line-height: 100px;
+ 
   text-align: center;
-  font-size: 30px;
+  font-size: 5px;
   border-radius: 20px;
 }
 /* flipping speed here */

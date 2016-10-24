@@ -76,10 +76,11 @@
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
       <div class="front">
+          <img src="imagenes/imagen0021.jpg" height="100px" width="100px">
         <i class=""></i>
       </div>
       <div class="back">
-        <p>vkontakte</p>
+        <p>Descripcion</p>
       </div>
     </div>
   </div>
@@ -87,10 +88,11 @@
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
       <div class="front">
+          <img src="imagenes/imagen0021.jpg" height="100px" width="100px">
         <i class=""></i>
       </div>
       <div class="back">
-        <p>facebook</p>
+        <p>Descripcion</p>
       </div>
     </div>
   </div>
@@ -99,11 +101,12 @@
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
       <div class="front">
+          <img src="imagenes/imagen0021.jpg" height="100px" width="100px">
           <!--imagen aqui-->
         <i class=""></i>
       </div>
       <div class="back">
-        <p>codepen</p>
+        <p>Descripcion</p>
       </div>
     </div>
   </div>
@@ -111,10 +114,11 @@
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
       <div class="front">
+          <img src="imagenes/imagen0021.jpg" height="100px" width="100px">
         <i class=""></i>
       </div>
       <div class="back">
-        <p>Nico</p>
+        <p>Descripcion</p>
       </div>
     </div>
   </div>
@@ -124,10 +128,11 @@
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
       <div class="front">
+          <img src="imagenes/imagen0021.jpg" height="100px" width="100px">
         <i class=""></i>
       </div>
       <div class="back">
-        <p>Carlos</p>
+        <p>Descripcion</p>
       </div>
     </div>
   </div>
@@ -135,10 +140,11 @@
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
       <div class="front">
+          <img src="imagenes/imagen0021.jpg" height="100px" width="100px">
         <i class=""></i>
       </div>
       <div class="back">
-        <p>facebook</p>
+        <p>Descripcion</p>
       </div>
     </div>
   </div>
@@ -147,10 +153,11 @@
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
       <div class="front">
+          <img src="imagenes/imagen0021.jpg" height="100px" width="100px">
         <i class=""></i>
       </div>
       <div class="back">
-        <p>codepen</p>
+        <p>Descripcion</p>
       </div>
     </div>
   </div>
@@ -158,10 +165,11 @@
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
       <div class="front">
+          <img src="imagenes/imagen0021.jpg" height="100px" width="100px">
         <i class=""></i>
       </div>
       <div class="back">
-        <p>github</p>
+        <p>Descripcion</p>
       </div>
     </div>
   </div>
