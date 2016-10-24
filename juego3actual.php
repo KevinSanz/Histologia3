@@ -5,6 +5,10 @@
          
            session_start();
           
+         $imagen1 = "imagenes/imagen0020.jpg";
+         $imagen2 = 'imagenes/imagen0021.jpg';
+         $imagen3 = 'imagenes/imagen0022.jpg';
+         $imagen4 = 'imagenes/imagen0023.jpg';
         ?>
     <head>
         <meta charset="UTF-8">
@@ -15,7 +19,12 @@
         <script src="css/desplegable/JQueryLatest.js"></script>
         <script src="css/desplegable/main.js"></script>
         <script src="js/Random.js"></script>
-        
+        <script>
+            function checkAnswer{
+                
+                
+            }
+        </script>
         <style>
             body{
                     background-image: url(imagenes/ciudad.jpg);
@@ -91,15 +100,15 @@
                 <div class="col-md-18">
                     <div class="thumbnail">			<!--Imagen base de datos-->
                         
-                            <img src="imagenes/imagen0021.jpg" style="width: 50%; border: Black 5px solid;
+                            <img src="<?php echo $imagen1 ?>" style="width: 50%; border: Black 5px solid;
                             border-radius: 20px;" class="zoom" >
                     										<!--Respuestas Posibles-->
 
                      </div>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
-                    <button type="button" class="btn btn-primary btn-lg btn-block">Block level button</button>
+                    <button id="btn1" type="button" onclick="alert(this.id) checkAnswer" class="btn btn-primary btn-lg btn-block">Respuesta correcta</button>
+                    <button id="btn2" type="button" onclick="checkAnswer();" class="btn btn-primary btn-lg btn-block">Respuesta falsa</button>
+                    <button id="btn3" type="button" onclick="checkAnswer();" class="btn btn-primary btn-lg btn-block">Respuesta falsa</button>
+                    <button id="btn4" type="button" onclick="checkAnswer();" class="btn btn-primary btn-lg btn-block">Respuesta falsa</button>
                     <br>
                     <br>
 
