@@ -51,13 +51,13 @@
 				</li>
 				<li><a href="#">Resultados</a></li>
                                <li><a href="#" onclick="getRandom()" id="random">Random</a></li>
-                                                       </ul>
+                                                       
 				<ul class="nav navbar-nav navbar-right">          
             <li><a href="./">Cerrar sesión <span class="sr-only"></span></a></li>
             <img src="imagenes/alumnos/<?php echo $dni;?>.jpg" 
                  class="img-circle" style="width:55px;padding:10px;">
           
-				
+                                </ul>	
 			</ul>
 		</nav>
 	</header>
@@ -84,7 +84,7 @@
 </div>
                     
                 </div>
-                    <div class="col-md-18"><h2 class="text-center" style="color:white;">Progreso</h2>
+                    
                 <div class="col-md-18"><h2 class="text-center" style="color:white;">  </h2>
                     <div class="row">
                       
