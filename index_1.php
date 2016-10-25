@@ -44,65 +44,134 @@ if(!isset($_SESSION['userid']))
         } 
         else 
         { 
-            echo '<div class="error">Su usuario es incorrecto, intente nuevamente.</div>'; 
+            echo '<div class="col-md-18"><h4 class="text-center" style="color:red;">Su usuario es incorrecto intentelo nuevamente</h4>'; 
         } 
     } 
 ?> 
-  
-<style type="text/css"> 
-*{ 
-    font-size: 14px; 
-} 
-body{ 
-background:#aaa; 
-} 
-form.login { 
-    background: none repeat scroll 0 0 #F1F1F1; 
-    border: 1px solid #DDDDDD; 
-    font-family: sans-serif; 
-    margin: 0 auto; 
-    padding: 20px; 
-    width: 278px; 
-    box-shadow:0px 0px 20px black; 
-    border-radius:10px; 
-} 
-form.login div { 
-    margin-bottom: 15px; 
-    overflow: hidden; 
-} 
-form.login div label { 
-    display: block; 
-    float: left; 
-    line-height: 25px; 
-} 
-form.login div input[type="text"], form.login div input[type="password"] {
-    border: 1px solid #DCDCDC; 
-    float: right; 
-    padding: 4px; 
-} 
-form.login div input[type="submit"] { 
-    background: none repeat scroll 0 0 #DEDEDE; 
-    border: 1px solid #C6C6C6; 
-    float: right; 
-    font-weight: bold; 
-    padding: 4px 20px; 
-} 
-.error{ 
-    color: red; 
-    font-weight: bold; 
-    margin: 10px; 
-    text-align: center; 
-} 
-</style> 
-  
-<form action="" method="post" class="login"> 
+<style>
+    body{
+  padding:0;
+  margin:0;
+}
+.vid-container{
+  position:relative;
+  height:100vh;
+  overflow:hidden;
+}
+.bgvid.back {
+  position: fixed; right: 0; bottom: 0;
+  min-width: 100%; min-height: 100%;
+  width: auto; height: auto; z-index: -100;
+}
+.inner {
+  position: absolute;
+}
+.inner-container{
+  width:400px;
+  height:430px;
+  position:absolute;
+  top:calc(50vh - 200px);
+  left:calc(50vw - 200px);
+  overflow:hidden;
+}
+.bgvid.inner{
+  top:calc(-50vh + 200px);
+  left:calc(-50vw + 200px);
+  filter: url("data:image/svg+xml;utf9,<svg%20version='1.1'%20xmlns='http://www.w3.org/2000/svg'><filter%20id='blur'><feGaussianBlur%20stdDeviation='10'%20/></filter></svg>#blur");
+  -webkit-filter:blur(10px);
+  -ms-filter: blur(10px);
+  -o-filter: blur(10px);
+  filter:blur(10px);
+}
+.box{
+  position:absolute;
+  height:100%;
+  width:100%;
+  font-family:Helvetica;
+  color:#fff;
+  background:rgba(0,0,0,0.13);
+  padding:30px 0px;
+}
+.box h1{
+  text-align:center;
+  margin:30px 0;
+  font-size:30px;
+}
+
+.box input{
+  display:block;
+  width:300px;
+  margin:10px auto;
+  padding:15px;
+  background:rgba(0,0,0,0.2);
+  color:#fff;
+  border:0;
+}
+.box input:focus,.box input:active,.box button:focus,.box button:active{
+  outline:none;
+}
+.box button{
+  background:#742ECC;
+  border:0;
+  color:#fff;
+  padding:10px;
+  font-size:20px;
+  width:330px;
+  margin:20px auto;
+  display:block;
+  cursor:pointer;
+}
+.box button:active{
+  background:#27ae60;
+}
+.box p{
+  font-size:14px;
+  text-align:center;
+}
+.box p span{
+  cursor:pointer;
+  color:#666;
+}
+    
+
+
+</style>
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+  <div class="vid-container">
+  <video id="Video1" class="bgvid back" autoplay="false" muted="muted" preload="auto" loop>
+      <source src="http://shortcodelic1.manuelmasiacsasi.netdna-cdn.com/themes/geode/wp-content/uploads/2014/04/milky-way-river-1280hd.mp4.mp4" type="video/mp4">
+  </video>
+      <br>
+      <br>
+     <div class="col-md-18"><h1 class="text-center" style="color:white;">HISTOLOGIA</h1>
+  <div class="inner-container">
+    <video id="Video2" class="bgvid inner" autoplay="false" muted="muted" preload="auto" loop>
+      <source src="http://shortcodelic1.manuelmasiacsasi.netdna-cdn.com/themes/geode/wp-content/uploads/2014/04/milky-way-river-1280hd.mp4.mp4" type="video/mp4">
+    </video>
+    <div class="box">
+      <h1>Login</h1>
+     
+      
+      
+      <form action="" method="post" class="login"> 
+          <div><label ></label><input name="user" type="text"placeholder="Username"></div> 
+    <div><label></label><input name="password" type="password" placeholder="Password"/></div> 
+    <button name="login">Login</button>
+
+    </form>
+      <p>Not a member? <span>Register</span></p>
+    </div>
+  </div>
+</div>
+<!--<form action="" method="post" class="login"> 
     <div><label>Username</label><input name="user" type="text" ></div> 
     <div><label>Password</label><input name="password" type="password"></div> 
     <div><input name="login" type="submit" value="login"></div>
-</form> 
+</form> -->
 <?php 
 } else { 
-    echo 'Su usuario ingreso correctamente.'; 
+    echo '<div class="col-md-18"><h2 class="text-center" style="color:white;">Progreso</h2>'; 
     echo '<a href="logout.php">Logout</a>'; 
 } 
 ?>

@@ -4,7 +4,8 @@
      <?php
           session_start();
           
-          
+           
+             
         ?>
     <head>
         <meta charset="UTF-8">
@@ -76,6 +77,7 @@
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
       <div class="front">
+         
           <img src="imagenes/imagen0021.jpg" height="100px" width="100px">
         <i class=""></i>
       </div>
