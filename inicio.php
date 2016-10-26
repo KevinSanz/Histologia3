@@ -71,22 +71,22 @@
                     <div class="row">
                         <div class="col-sm-6 col-md-3">
                             <a href="Juego1.php" class="thumbnail">
-                            <img src="imagenes/fondoNico.jpg" alt="...">
+                                <img src="imagenes/fondos/fondoNico.jpg" alt="...">
                         </a>
                         </div>
                         <div class="col-sm-6 col-md-3">
                             <a href="Juego2.php" class="thumbnail">
-                            <img src="imagenes/fondoNico.jpg">
+                                <img src="imagenes/fondos/fondoNico.jpg">
                         </a>
                         </div>
                         <div class="col-sm-6 col-md-3">
                             <a href="Juego3.php" class="thumbnail">
-                            <img src="imagenes/fondoNico.jpg" >
+                                <img src="imagenes/fondos/fondoNico.jpg" >
                         </a>
                         </div>
                         <div class="col-sm-6 col-md-3">
                             <a href="Juego4.php" class="thumbnail">
-                            <img src="imagenes/fondoNico.jpg" >
+                                <img src="imagenes/fondos/fondoNico.jpg" >
                         </a>
                         </div>
                     
