@@ -3,7 +3,7 @@
 <html>
      <?php
          
-           session_start();
+          
           
         ?>
     <head>
@@ -20,7 +20,6 @@
         <style>
             body{
                     background-image: url(imagenes/ciudad.jpg);
-
             }
             
         </style>
@@ -53,11 +52,12 @@
                                <li><a href="#" onclick="getRandom()" id="random">Random</a></li>
                                                        
 				<ul class="nav navbar-nav navbar-right">          
-           <li><a href="index_1.php" >Cerrar sesión </a></li>
-            <img src="imagenes/alumnos/<?php echo $_SESSION['username']; ?>.jpg" 
+            <li><a href="./">Cerrar sesión <span class="sr-only"></span></a></li>
+            <img src="imagenes/alumnos/<?php echo $dni;?>.jpg" 
                  class="img-circle" style="width:55px;padding:10px;">
           
-			</ul>	</ul>
+                                </ul>	
+			</ul>
 		</nav>
 	</header>
                 <!--<Fin menu>-->
@@ -83,7 +83,7 @@
 </div>
                     
                 </div>
-                    <div class="col-md-18"><h2 class="text-center" style="color:white;">Progreso</h2>
+                    
                 <div class="col-md-18"><h2 class="text-center" style="color:white;">  </h2>
                     <div class="row">
                       

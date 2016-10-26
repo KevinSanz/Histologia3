@@ -32,14 +32,11 @@ if(!isset($_SESSION['userid']))
         { 
            
             
-
     $_SESSION['loggedin'] = true;
     $_SESSION['username'] = $_POST['user'];
-
     $_SESSION['start'] = time();
     $_SESSION['expire'] = $_SESSION['start'] + (5 * 60);
    
-
             header("location:inicio.php"); 
         } 
         else 
@@ -97,7 +94,6 @@ if(!isset($_SESSION['userid']))
   margin:30px 0;
   font-size:30px;
 }
-
 .box input{
   display:block;
   width:300px;
@@ -133,8 +129,6 @@ if(!isset($_SESSION['userid']))
   color:#666;
 }
     
-
-
 </style>
 
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -142,9 +136,8 @@ if(!isset($_SESSION['userid']))
   <video id="Video1" class="bgvid back" autoplay="false" muted="muted" preload="auto" loop>
       <source src="http://shortcodelic1.manuelmasiacsasi.netdna-cdn.com/themes/geode/wp-content/uploads/2014/04/milky-way-river-1280hd.mp4.mp4" type="video/mp4">
   </video>
-      <br>
-      <br>
-     <div class="col-md-18"><h1 class="text-center" style="color:white;">HISTOLOGIA</h1>
+     
+     
   <div class="inner-container">
     <video id="Video2" class="bgvid inner" autoplay="false" muted="muted" preload="auto" loop>
       <source src="http://shortcodelic1.manuelmasiacsasi.netdna-cdn.com/themes/geode/wp-content/uploads/2014/04/milky-way-river-1280hd.mp4.mp4" type="video/mp4">
