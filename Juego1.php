@@ -45,18 +45,18 @@
                                             <li><a href="Juego1.php">Juego 1</a></li>
                                             <li><a href="Juego2.php">Juego 2</a></li>
                                             <li><a href="Juego3.php">Juego 3</a></li>
-						<li><a href="#">Juego 4</a></li>
+                                            <li><a href="Juego4.php">Juego 4</a></li>
 					</ul>
 				</li>
 				<li><a href="#">Resultados</a></li>
                                 <li><a href="#" onclick="getRandom()" id="random">Random</a></li>
-                                                        </ul>
+                                                       
 				<ul class="nav navbar-nav navbar-right">          
             <li><a href="./">Cerrar sesión <span class="sr-only"></span></a></li>
             <img src="imagenes/alumnos/<?php echo $dni;?>.jpg" 
                  class="img-circle" style="width:55px;padding:10px;">
           
-				
+				 </ul>
 			</ul>
 		</nav>
 	</header>
