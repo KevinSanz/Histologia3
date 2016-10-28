@@ -23,15 +23,25 @@ function verificar_login($user,$password,&$result) {
         return 0; 
     } 
 } 
-  
+
 if(!isset($_SESSION['userid'])) 
 { 
     if(isset($_POST['login'])) 
     { 
         if(verificar_login($_POST['user'],$_POST['password'],$result) == 1)
         { 
-           
-            
+            $resultado = mysql_query('select * from imagen');
+
+        $table = array();
+        while($r = mysql_fetch_array($resultado)){
+            $row = array();
+            foreach($r as $k=>$v) {
+                 $row[$k] = $v;
+            }
+            array_push($table,$row);
+            unset($row);
+        }
+    $_SESSION['imagenes'] = $table;
     $_SESSION['loggedin'] = true;
     $_SESSION['username'] = $_POST['user'];
     $_SESSION['start'] = time();

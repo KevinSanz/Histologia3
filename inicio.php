@@ -2,7 +2,7 @@
 
 <html>
      <?php
-         
+         session_start();
           
           
         ?>
@@ -51,7 +51,7 @@
                                                         
 				<ul class="nav navbar-nav navbar-right">          
                                     <li><a href=""onclick="logout.php">Cerrar sesión <span class="sr-only"></span></a></li>
-            <img src="imagenes/alumnos/<?php echo $dni;?>.jpg" 
+            <img src="imagenes/alumnos/<?php echo $_SESSION['username'];?>.jpg"
                  class="img-circle" style="width:55px;padding:10px;">
           </ul>
                         </ul>		

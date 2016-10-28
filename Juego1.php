@@ -2,8 +2,9 @@
 
 <html>
      <?php
+     session_start();
          
-          
+         
           
         ?>
     <head>
@@ -53,7 +54,7 @@
                                                        
 				<ul class="nav navbar-nav navbar-right">          
             <li><a href="./">Cerrar sesión <span class="sr-only"></span></a></li>
-            <img src="imagenes/alumnos/<?php echo $dni;?>.jpg" 
+            <img src="imagenes/alumnos/<?php echo $dni;?>.jpg"
                  class="img-circle" style="width:55px;padding:10px;">
           
 				 </ul>
@@ -76,10 +77,12 @@
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
       <div class="front">
+          <img src="<?php echo $_SESSION['imagenes'][0]['Direccion'] ?>" height="100px" width="100px">
+          
         <i class=""></i>
       </div>
       <div class="back">
-        <p>vkontakte</p>
+        <p><?php echo $_SESSION['imagenes'][0]['Nombre'] ?></p>
       </div>
     </div>
   </div>
@@ -87,10 +90,10 @@
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
       <div class="front">
-        <i class=""></i>
+        <img src="<?php echo $_SESSION['imagenes'][1]['Direccion'] ?>" height="100px" width="100px">
       </div>
       <div class="back">
-        <p>facebook</p>
+        <p><?php echo $_SESSION['imagenes'][1]['Nombre'] ?></p>
       </div>
     </div>
   </div>
@@ -100,10 +103,10 @@
     <div class="flipper">
       <div class="front">
           <!--imagen aqui-->
-        <i class=""></i>
+        <img src="<?php echo $_SESSION['imagenes'][2]['Direccion'] ?>" height="100px" width="100px">
       </div>
       <div class="back">
-        <p>codepen</p>
+        <p><?php echo $_SESSION['imagenes'][2]['Nombre'] ?></p>
       </div>
     </div>
   </div>
@@ -111,16 +114,16 @@
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
       <div class="front">
-        <i class=""></i>
+        <img src="<?php echo $_SESSION['imagenes'][3]['Direccion'] ?>" height="100px" width="100px">
       </div>
       <div class="back">
-        <p>Nico</p>
+        <p><?php echo $_SESSION['imagenes'][3]['Nombre'] ?></p>
       </div>
     </div>
   </div>
 </div>
                     
-                    <div class="raw1">
+<!--                    <div class="raw1">
   <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
     <div class="flipper">
       <div class="front">
@@ -165,7 +168,7 @@
       </div>
     </div>
   </div>
-</div>
+</div>  -->
                     
                 <div class="col-md-18"><h2 class="text-center" style="color:white;">  </h2>
                     <div class="row"> 
