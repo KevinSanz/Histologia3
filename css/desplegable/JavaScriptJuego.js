@@ -43,8 +43,8 @@ window.onload = function(){
                 headline: "Headline 2",
                 subhead: "",
                 copy: "",
-                image: "violet.jpg",
-                largeImage: "violet_lrg.jpg",
+                image: "imagenes/imagen0020.jpg",
+                largeImage: "imagenes/imagen0020.jpg",
                 url: ""
             },
             {
@@ -52,8 +52,8 @@ window.onload = function(){
                 headline: "Headline 3",
                 subhead: "",
                 copy: "",
-                image: "tom.jpg",
-                largeImage: "tom_lrg.jpg",
+                image: "imagenes/imagen0021.jpg",
+                largeImage: "imagenes/imagen0021.jpg",
                 url: ""
             },
             {
@@ -61,8 +61,8 @@ window.onload = function(){
                 headline: "Headline 4",
                 subhead: "",
                 copy: "",
-                image: "cora.jpg",
-                largeImage: "cora_lrg.png",
+                image: "imagenes/imagen0022.jpg  ",
+                largeImage: "imagenes/imagen0022.jpg",
                 url: ""
             },
             {
@@ -70,8 +70,8 @@ window.onload = function(){
                 headline: "Headline 5",
                 subhead: "",
                 copy: "",
-                image: "robert.jpg",
-                largeImage: "robert_lrg.jpg",
+                image: "imagenes/imagen0023jpg",
+                largeImage: "imagenes/imagen0023.jpg",
                 url: ""
             },
             {
@@ -134,7 +134,7 @@ window.onload = function(){
         front.style.width =  cardWidth + "px";
 	    	front.style.height = cardHeight + "px";
 	    	//front.innerHTML = "<img src=" + backofCard + ">";
-        front.innerHTML = "<p>front</p>"
+        front.innerHTML = "<p></p>"
 	    	card.appendChild(front);
 
 	    	var back = document.createElement("div");
@@ -143,8 +143,8 @@ window.onload = function(){
         back.className = "back";
         back.style.width =  cardWidth + "px";
 	    	back.style.height = cardHeight + "px";
-        back.innerHTML = "<p>" + totalCards[i].id + "</p>";
-	    	//back.innerHTML = "<img src=" + totalCards[i].image + ">";
+        back.innerHTML = "<p></p>";
+	    	back.innerHTML = '<img src="' + totalCards[i].image + '" style="max-height: 290px; max-width: 280px;" >';
 	    	card.appendChild(back); 
  
 	    	totalCards[i].cardWrapper = cardWrapper;

@@ -34,7 +34,7 @@
                 <!--<Aqui empieza el menu de la pagina >-->
                 <header>
 		<div class="menu_bar">
-			<a href="#" class="bt-menu">Hitoslogía</a>
+			<a href="#" class="bt-menu">Histología</a>
 		</div>
 
 		<nav>

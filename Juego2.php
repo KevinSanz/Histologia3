@@ -2,7 +2,7 @@
 
 <html>
      <?php
-         
+         session_start();
           
           
         ?>
@@ -11,10 +11,10 @@
         <title>Juego2</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link href="css/desplegable/menu.css" rel="stylesheet" type="text/css">
-        <link href="css/desplegable/CSSJuego2.css" rel="stylesheet" type="text/css">
-        <script src="css/desplegable/JQueryLatest.js"></script>
-        <script src="css/desplegable/Juego2.js"></script>
+        <link href="css/desplegable/CSSJuego2.css" rel="stylesheet" type="text/css">             
         <script src="css/desplegable/main.js"></script>
+        <script src="css/desplegable/JQueryLatest.js"></script>
+        <script src="css/desplegable/JavaScriptJuego.js"></script>
         <script src="js/Random.js"></script>
         
         <style>
@@ -34,7 +34,7 @@
                 <!--<Aqui empieza el menu de la pagina >-->
                 <header>
 		<div class="menu_bar">
-			<a href="#" class="bt-menu">Hitoslogía</a>
+			
 		</div>
 
 		<nav>
@@ -102,3 +102,4 @@
     </body>
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    
