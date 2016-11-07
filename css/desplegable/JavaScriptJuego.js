@@ -4,7 +4,6 @@ window.onload = function(){
         	console.log(t);
 
     	}
-
     	var divs = document.getElementById("wrapper").getElementsByTagName("div");
     	for(var i = 0; i < divs.length; i++){
     		divs[i].style.position = "absolute";
@@ -17,25 +16,22 @@ window.onload = function(){
         var popUp = document.getElementById("popUp");
         popUp.style.display = "none";
         TweenMax.to(popUp, 0, {alpha: 0, rotationY:-180});
-    	 
     	var cardWidth = 90;
     	var cardHeight = 90;
     	var spacingRight = 19;
     	var spacingTop = 23;
     	var numColumns = 4;
-      
     	
     	var gameHolder = document.getElementById("game");
     	var anim = [];
-        
     	var cards = [
     		{
     			id: 1,
     			headline: "Headline 1",
     			subhead: "",
     			copy: "",
-    			image: "imagenes/ciudad.jpg",
-                        largeImage: "imagenes/ciudad.jpg",
+    			image: arrayJS[0]['Direccion'],
+                        largeImage: arrayJS[0]['Direccion'],
     			url: ""
     		},
             {
@@ -43,8 +39,8 @@ window.onload = function(){
                 headline: "Headline 2",
                 subhead: "",
                 copy: "",
-                image: "imagenes/imagen0020.jpg",
-                largeImage: "imagenes/imagen0020.jpg",
+                image: arrayJS[1]['Direccion'],
+                largeImage: arrayJS[1]['Direccion'],
                 url: ""
             },
             {
@@ -52,8 +48,8 @@ window.onload = function(){
                 headline: "Headline 3",
                 subhead: "",
                 copy: "",
-                image: "imagenes/imagen0021.jpg",
-                largeImage: "imagenes/imagen0021.jpg",
+                image: arrayJS[2]['Direccion'],
+                largeImage: arrayJS[2]['Direccion'],
                 url: ""
             },
             {
@@ -61,8 +57,8 @@ window.onload = function(){
                 headline: "Headline 4",
                 subhead: "",
                 copy: "",
-                image: "imagenes/imagen0022.jpg  ",
-                largeImage: "imagenes/imagen0022.jpg",
+                image: arrayJS[3]['Direccion'],
+                largeImage: arrayJS[3]['Direccion'],
                 url: ""
             },
             {
@@ -70,8 +66,8 @@ window.onload = function(){
                 headline: "Headline 5",
                 subhead: "",
                 copy: "",
-                image: "imagenes/imagen0023jpg",
-                largeImage: "imagenes/imagen0023.jpg",
+                image: "imagenes/imagen00a23jpg",
+                largeImage: "imagenes/imagen002a3.jpg",
                 url: ""
             },
             {

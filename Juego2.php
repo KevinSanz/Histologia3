@@ -3,10 +3,11 @@
 <html>
      <?php
          session_start();
-          
+         
           
         ?>
     <head>
+        
         <meta charset="UTF-8">
         <title>Juego2</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -14,6 +15,9 @@
         <link href="css/desplegable/CSSJuego2.css" rel="stylesheet" type="text/css">             
         <script src="css/desplegable/main.js"></script>
         <script src="css/desplegable/JQueryLatest.js"></script>
+        <script>
+            var arrayJS= <?php echo json_encode($_SESSION['imagenes']); ?> ;
+        </script>
         <script src="css/desplegable/JavaScriptJuego.js"></script>
         <script src="js/Random.js"></script>
         
