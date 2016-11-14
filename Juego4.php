@@ -13,9 +13,8 @@
         <script src="css/desplegable/JQueryLatest.js"></script>
         <script src="css/desplegable/main.js"></script>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-        <link rel="stylesheet" href="/resources/demos/style.css">
         <script>
-        
+        var arrayImg= <?php echo json_encode($_SESSION['imagenes']); ?> ;
         </script>
         <script>
     var pu;
@@ -23,10 +22,24 @@
     var movido;
     var comprobarRes;
     var comprobarPu;
+    var posicion = [];
+    var respuestas = [];
+    var k = 0;
+    while (k < arrayImg.length){
+        posicion[k] = k;
+        k++;
+    }
+    k = 0;
+    shuffle(posicion);
+    while (k < 4){
+        respuestas[k] = posicion[k];
+        k++;
+    }
     var uno = 1;
     var dos = 2;
     var tres = 3;
     var cuatro = 4;
+    
 //    for (var i = 1; i<8; i++){
 //        var imagen = "img"+i;
 //        console.log("imagen");
@@ -55,17 +68,17 @@
       
     $( ".draggable" ).draggable({
         drag: function(e, ui){
-            res = this.id;
-            comprobarRes = res.substr(-1,1);
-            movido = this;
+            res = this.value;
+            
+            movido = $(this);
         }
     });
     $( ".droppable" ).droppable({
       drop: function( e, ui ) {
           var posX = e.pageX - $(this).position().left;
           var posY = e.pageY - $(this).position().top;
-          pu = this.id;
-          comprobarPu = pu.substr(-1,1);
+          pu = this.value;
+          
         
         $( this )
 //          .append('<div id="recuadro" style="width: 130px; height: 130px; border: solid green 1px; position:absolute; top:'+posY+'px; left:'+posX+'px;"></div>');
@@ -88,31 +101,27 @@
         function sumaPuntos(){
            
             sumar = false;
-            if(pu === "Res1" && R1 === false){
+            if(pu === res && pu !== 0){
                 sumar = true;
                 R1 = true;
             }
-            if(pu === "Res2" && R2 === false){
-                sumar = true;
-                R2 = true;
-            }
-            if(pu === "Res3" && R3 === false){
-                sumar = true;
-                R3 = true;
-            }
-            if(pu === "Res4" && R4 === false){
-                sumar = true;
-                R4 = true;
-            }
-            if(sumar && comprobarPu === comprobarRes){
+            if(sumar){
                  puntuacion = puntuacion + 10;
-                $( puntos )
-                    .text(puntuacion);
+                
             
         }
             console.log(puntuacion);
             
         }
+        function shuffle(a) {
+    var j, x, i;
+    for (i = a.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
+    }
+}
   </script>
         <style>
             body{
@@ -168,22 +177,22 @@
                 
                     <div class="col">
                         <div class="col-sm-4">
-                            <div class="draggable" id="Respuesta1">
-                            <img id="img1" src="<?php echo $_SESSION['imagenes'][0]['Direccion'] ?>" alt="..." style="max-height: 250px; max-width: 300px">
+                            <div class="draggable" id="Res1">
+                            <img id="img1"  alt="..." style="max-height: 250px; max-width: 300px">
                             <br>
                             
                             </div>
-                            <div class="draggable" id="Respuesta2">
+                            <div class="draggable" id="Res2">
                                 
-                                <img id="img2" src="<?php echo $_SESSION['imagenes'][1]['Direccion'] ?>" style="max-height: 250px;  max-width: 300px">
+                                <img id="img2"  style="max-height: 250px;  max-width: 300px">
                             </div>
-                            <div class="draggable" id="Respuesta3">
+                            <div class="draggable" id="Res3">
                             
-                                <img id="img3" src="<?php echo $_SESSION['imagenes'][2]['Direccion'] ?>" style="max-height: 250px;  max-width: 300px">
+                                <img id="img3"  style="max-height: 250px;  max-width: 300px">
                             </div>
-                            <div class="draggable" id="Respuesta4">
+                            <div class="draggable" id="Res4">
                             
-                                <img id="img4" src="<?php echo $_SESSION['imagenes'][3]['Direccion'] ?>" style="max-height: 250px;  max-width: 300px; min-height: 200px; min-width: 300px">
+                                <img id="img4"  style="max-height: 250px;  max-width: 300px; min-height: 200px; min-width: 300px">
                             </div>
                         </div>
                     
@@ -196,22 +205,22 @@
                      </div>
                 <div class="col">
                         <div class="col-sm-4">
-                            <div id="Res1" class="droppable">
-                            <img id="img5" src="<?php echo $_SESSION['imagenes'][0]['Direccion'] ?>" alt="..." style="max-height: 250px;  max-width: 300px">
+                            <div id="Res5" class="droppable">
+                            <img id="img5"  alt="..." style="max-height: 250px;  max-width: 300px">
                             <br>
                             
                             </div>
-                            <div id="Res2" class="droppable">
+                            <div id="Res6" class="droppable">
                                 
-                            <img id="img6" src="<?php echo $_SESSION['imagenes'][1]['Direccion'] ?>" style="max-height: 250px; max-width: 300px">
+                            <img id="img6"  style="max-height: 250px; max-width: 300px">
                             </div>
-                            <div id="Res3" class="droppable">
+                            <div id="Res7" class="droppable">
                             
-                                <img id="img7" src="<?php echo $_SESSION['imagenes'][2]['Direccion'] ?>" style="max-height: 250px; max-width: 300px">
+                                <img id="img7"  style="max-height: 250px; max-width: 300px">
                             </div>
-                            <div id="Res4" class="droppable">
+                            <div id="Res8" class="droppable">
                             
-                            <img id="img8" src="<?php echo $_SESSION['imagenes'][3]['Direccion'] ?>" style="max-height: 250px; max-width: 300px; min-height: 200px; min-width: 300px">
+                            <img id="img8"  style="max-height: 250px; max-width: 300px; min-height: 200px; min-width: 300px">
                             </div>
                         </div>
                     
@@ -220,8 +229,7 @@
                     <div class="row">
                         <div class="col-sm-4"></div>
                         <div class="col-sm-4">
-                            <p id="score" class="bt-menu">Puntuacion: </p>
-                            <p id="puntos" class="bt-menu"></p>
+                            
                         </div>
                         <div class="col-sm-4"></div>
                     </div>
@@ -234,7 +242,31 @@
     <script src="js/jquery-3.1.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script>       
+    <script>
+    var elemento;
+    var j = 0;
+    while(j< 2){
+        shuffle(respuestas);
+        var i = 0;
+        while(i < 4){
+            if(j===1){
+                elemento = document.getElementById("img"+(i+5));
+                elemento.src = arrayImg[(respuestas[i])]["Direccion"] ;
+                elemento = document.getElementById("Res"+(i+5));
+                elemento.value = arrayImg[(respuestas[i])]["id"];
+            }
+            else{
+                elemento = document.getElementById("img"+(i+1));
+                elemento.src = arrayImg[(respuestas[i])]["Direccion"] ;
+                elemento = document.getElementById("Res"+(i+1));
+                elemento.value = arrayImg[(respuestas[i])]["id"];
+            }
+            i++;
+        }
+        i= 0;
+        j++;
+    }
+    console.log(elemento.value);
         function getRandom() {
             var numero;
             numero = Math.floor(Math.random() * (5 - 1)) + 1;
